@@ -1,6 +1,4 @@
-from PIL import Image
-from PIL.ImageDraw import ImageDraw
-from PIL.ImageFont import ImageFont
+from PIL import Image, ImageDraw, ImageFont
 
 
 class Pic:
@@ -32,7 +30,9 @@ class Pic:
         self.img.paste(other.img, (x, y))
 
     def print(self, text, x, y):
-        pass
+        draw = ImageDraw.Draw(self.img)
+        font = ImageFont.truetype('arial.ttf', 50)
+        draw.text((x, y), text, font=font)
 
 
 def test1():
@@ -59,9 +59,10 @@ def test2():
     img2.resize(img2.width()/2, img2.height()/2)
     img2.print_info()
     img.paste(img2, 530, 5)
+#    img.show()
+#    img.save("out.jpg")
+    img.print('bober', 10, 10)
     img.show()
-    img.save("out.jpg")
-    img.print('hello', 10, 10)
 
 
 if __name__ == '__main__':
