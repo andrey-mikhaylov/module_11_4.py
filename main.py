@@ -1,4 +1,6 @@
 from PIL import Image
+from PIL.ImageDraw import ImageDraw
+from PIL.ImageFont import ImageFont
 
 
 class Pic:
@@ -20,14 +22,17 @@ class Pic:
     def height(self):
         return self.img.height
 
-    def show(self):
-        self.img.show()
+    def show(self, title=''):
+        self.img.show(title)
 
     def save(self, path):
         self.img.save(path)
 
     def paste(self, other, x, y):
         self.img.paste(other.img, (x, y))
+
+    def print(self, text, x, y):
+        pass
 
 
 def test1():
@@ -40,6 +45,7 @@ def test1():
     img2.show()
     img2.save("out.jpg")
 
+
 def test2():
     img = Pic("high.webp")
     img.print_info()
@@ -49,11 +55,13 @@ def test2():
     #img.save("out.jpg")
 
     img2 = Pic("images.jpg")
+    img2.print_info()
     img2.resize(img2.width()/2, img2.height()/2)
+    img2.print_info()
     img.paste(img2, 530, 5)
-    img.print_info()
     img.show()
     img.save("out.jpg")
+    img.print('hello', 10, 10)
 
 
 if __name__ == '__main__':
