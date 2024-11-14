@@ -1,16 +1,33 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from PIL import Image
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    pass
+# 1) Создать изображение, на котором будет сгенерирована надпись с помощью Python.
+# 2) Найти подходящие методы обработки изображений на Python, изучить библиотеки, такие как PIL или OpenCV.
+# 3) Найти учебные материалы (туториалы) по обработке изображений в Python.
+# 4) Изучить документацию по библиотекам для обработки изображений, чтобы лучше понять их возможности.
+# 5) Разработать код с использованием интроспекции, позволяющий исследовать атрибуты объектов и их методы.
+# 6) Инкапсулировать все в один класс и протестировать запуск кода.
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    main()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+"""
+Для выполнения задачи нужно:
+
+1) Создать изображение, на котором будет сгенерирована надпись с помощью Python.
+
+2) Найти подходящие методы обработки изображений на Python, изучить библиотеки, такие как PIL или OpenCV.
+
+3) Найти учебные материалы (туториалы) по обработке изображений в Python.
+
+4) Изучить документацию по библиотекам для обработки изображений, чтобы лучше понять их возможности.
+
+5) Разработать код с использованием интроспекции, позволяющий исследовать атрибуты объектов и их методы.
+
+6) Инкапсулировать все в один класс и протестировать запуск кода.
+"""
