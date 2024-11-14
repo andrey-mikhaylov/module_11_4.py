@@ -31,8 +31,7 @@ class Pic:
 
     def print(self, text, x, y):
         draw = ImageDraw.Draw(self.img)
-        font = ImageFont.truetype('arial.ttf', 50)
-        draw.text((x, y), text, font=font)
+        draw.text((x, y), text, font_size=50)
 
 
 def test1():
@@ -49,7 +48,7 @@ def test1():
 def test2():
     img = Pic("high.webp")
     img.print_info()
-    img.crop(16, 418, 650, 493)
+    img.crop(16, 420, 650, 490)
     img.print_info()
     #img.show()
     #img.save("out.jpg")
@@ -63,6 +62,7 @@ def test2():
 #    img.save("out.jpg")
     img.print('bober', 10, 10)
     img.show()
+    img.save("out.jpg")
 
 
 if __name__ == '__main__':
